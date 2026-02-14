@@ -4,51 +4,73 @@
     <title>Anand Verse</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background: #f4f4f4;
+            background: linear-gradient(120deg, #f6f9fc, #e9eff5);
         }
 
         header {
             background: #111;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            animation: fadeIn 1.5s ease;
         }
 
         nav {
-            background: #333;
-            padding: 10px;
+            background: #222;
             text-align: center;
+            padding: 12px;
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 18px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #00c3ff;
         }
 
         section {
             max-width: 900px;
             margin: 40px auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            animation: slideUp 0.8s ease;
         }
 
         .poem {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
         }
 
         footer {
             text-align: center;
             padding: 20px;
             color: #666;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -67,7 +89,7 @@
 
 <section id="home">
     <h2>Welcome</h2>
-    <p>Welcome to my personal poetry website where I share my thoughts and emotions through words.</p>
+    <p>Welcome to my personal poetry space where words meet emotions.</p>
 </section>
 
 <section id="poems">
@@ -87,17 +109,15 @@
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am Anand Kumar Singh, passionate about poetry and creative writing.  
-        This website is a space where I express emotions, ideas, and stories through words.
+        I am Anand Kumar Singh, passionate about poetry and creative expression.
+        This website is a reflection of my thoughts and emotions.
     </p>
 </section>
 
 <footer>
-    © 2026 Anand Kumar Singh <br>  
-Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+    © 2026 Anand Kumar Singh <br>
+    Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
 </footer>
 
 </body>
 </html>
-
-
