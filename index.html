@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Anand Kumar Singh</title>
+    <title>Anand Verse</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             margin: 0;
             background: #f4f4f4;
         }
+
         header {
             background: #111;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         section {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
         }
+
+        .poem {
+            margin-bottom: 30px;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -31,13 +55,41 @@
 <body>
 
 <header>
-    <h1>Anand Kumar Singh</h1>
-    <p>Official Poetry Website</p>
+    <h1>Anand Verse</h1>
+    <p>Poetry by Anand Kumar Singh</p>
 </header>
 
-<section>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#poems">Poems</a>
+    <a href="#about">About</a>
+</nav>
+
+<section id="home">
     <h2>Welcome</h2>
-    <p>This is my personal website where I publish my poems.</p>
+    <p>Welcome to my personal poetry website where I share my thoughts and emotions through words.</p>
+</section>
+
+<section id="poems">
+    <h2>My Poems</h2>
+
+    <div class="poem">
+        <h3>Your Poem Title</h3>
+        <p>
+            Write your poem here… <br>
+            Line 2… <br>
+            Line 3…
+        </p>
+    </div>
+
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am Anand Kumar Singh, passionate about poetry and creative writing.  
+        This website is a space where I express emotions, ideas, and stories through words.
+    </p>
 </section>
 
 <footer>
