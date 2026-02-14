@@ -2,23 +2,25 @@
 <html>
 <head>
     <title>Anand Verse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background: linear-gradient(120deg, #f6f9fc, #e9eff5);
+            background: #f4f6f8;
+            transition: background 0.3s, color 0.3s;
         }
 
         header {
-            background: #111;
+            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
             color: white;
-            padding: 30px;
             text-align: center;
-            animation: fadeIn 1.5s ease;
+            padding: 80px 20px;
         }
 
         nav {
-            background: #222;
+            background: #111;
             text-align: center;
             padding: 12px;
         }
@@ -27,28 +29,36 @@
             color: white;
             margin: 0 18px;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: bold;
         }
 
-        nav a:hover {
-            color: #00c3ff;
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
         }
 
         section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            animation: slideUp 0.8s ease;
+            padding: 20px;
         }
 
-        .poem {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+        .poem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .poem-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         footer {
@@ -57,67 +67,87 @@
             color: #666;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .dark-mode {
+            background: #111;
+            color: white;
         }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .dark-mode .poem-card {
+            background: #222;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #111;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
+
+<button class="toggle" onclick="toggleMode()">🌙 Dark Mode</button>
 
 <header>
     <h1>Anand Verse</h1>
-    <p>Poetry by Anand Kumar Singh</p>
+    <p>Where words meet emotions</p>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
     <a href="#poems">Poems</a>
-    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 </nav>
-
-<section id="home">
-    <h2>Welcome</h2>
-    <p>Welcome to my personal poetry space where words meet emotions.</p>
-</section>
 
 <section id="poems">
     <h2>My Poems</h2>
 
-    <div class="poem">
-        <h3>Your Poem Title</h3>
-        <p>
-            Write your poem here… <br>
-            Line 2… <br>
-            Line 3…
-        </p>
-    </div>
+    <div class="poem-grid">
 
+        <div class="poem-card">
+            <h3>Poem Title</h3>
+            <p>Your poem text here...</p>
+        </div>
+
+        <div class="poem-card">
+            <h3>Poem Title</h3>
+            <p>Your poem text here...</p>
+        </div>
+
+        <div class="poem-card">
+            <h3>Poem Title</h3>
+            <p>Your poem text here...</p>
+        </div>
+
+    </div>
 </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am Anand Kumar Singh, passionate about poetry and creative expression.
-        This website is a reflection of my thoughts and emotions.
-    </p>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button>Send</button>
 </section>
 
 <footer>
     © 2026 Anand Kumar Singh <br>
-    Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+    Licensed under CC BY-NC-ND 4.0
 </footer>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
